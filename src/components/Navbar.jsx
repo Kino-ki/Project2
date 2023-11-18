@@ -1,25 +1,33 @@
 import {Link} from "react-router-dom"
 
+
 function Navbar () {
 
     return(
-        <nav className="flex flex-row justify-between bg-rose-300 bg-cover py-2
-        font-bold">
-            <span className="block my-auto, my-6 ml-28 text-5xl py-10 text-yellow-800 ">Ma Boutique</span>
-            <ul className=" flex flex-row gap-28 mt-20 pl-48 text-2xl mr-24">
+        <>
+        <nav className=" bg-rose-300 font-bold shadow-2xl hidden
+        md:flex md:flex-row justify-between">
+        <span className="text-right text-3xl text-yellow-800 box-border 
+            md:py-10 md:text-left">Ma Boutique</span>
+            <ul className=" md:flex flex-row gap-2 mt-20 text-2xl">
                 <li>
-                    <Link className=" hover:text-yellow-800 rounded-xl border-2 shadow-2xl p-8" to="/">Accueil</Link>
+                    <Link className=" hover:text-yellow-800 rounded-xl border-2 shadow-2xl" to="/">Accueil</Link>
                 </li>
                 <li>
-                    <Link className=" hover:text-yellow-800 rounded-xl border-2 shadow-xl p-8" to="Products">Products</Link>
+                    <Link className=" hover:text-yellow-800 rounded-xl border-2 shadow-xl" to="Products">Products</Link>
                 </li>
                 <li>
-                    <Link className=" hover:text-yellow-800 rounded-xl border-2 shadow-xl p-8" to ="Contact"> Contact</Link>
+                    <Link className="hover:text-yellow-800 rounded-xl border-2 shadow-xl" to="Mon Panier"> Mon Panier</Link>
+                </li>
+                <li>
+                    <Link className=" hover:text-yellow-800 rounded-xl border-2 shadow-xl" to ="Contact"> Contact</Link>
                 </li>
             </ul>
              
 
         </nav>
+        </>
+
     )
 }
 
