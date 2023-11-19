@@ -5,22 +5,25 @@ function Navbar () {
 
     return(
         <>
-        <nav className=" bg-rose-300 font-bold shadow-2xl hidden
+        <nav className=" bg-gradient-to-r from-rose-300 via-purple-300 to-lime-100 font-bold shadow-2xl hidden
         md:flex md:flex-row justify-between">
-        <span className="text-right text-3xl text-yellow-800 box-border 
-            md:py-10 md:text-left">Ma Boutique</span>
-            <ul className=" md:flex flex-row gap-2 mt-20 text-2xl">
+
+        <span className="text-3xl text-lime-950 box-border mx-3
+        md:my-0">Crewsti Boutique</span>
+
+            <ul className=" md:flex flex-row gap-2 mt-10 text-2xl text-gray-600
+            md:gap-12 md:text3xl md:mb-4 mr-10">
                 <li>
-                    <Link className=" hover:text-yellow-800 rounded-xl border-2 shadow-2xl" to="/">Accueil</Link>
+                    <Link className=" hover:text-lime-950  rounded-xl shadow-2xl" to="/">Accueil</Link>
                 </li>
                 <li>
-                    <Link className=" hover:text-yellow-800 rounded-xl border-2 shadow-xl" to="Products">Products</Link>
+                    <Link className=" hover:text-lime-950  rounded-xl" to="Products">Articles</Link>
                 </li>
                 <li>
-                    <Link className="hover:text-yellow-800 rounded-xl border-2 shadow-xl" to="Mon Panier"> Mon Panier</Link>
+                    <Link className="hover:text-lime-950  rounded-xl" to="Mon Panier"> Mon Panier</Link>
                 </li>
                 <li>
-                    <Link className=" hover:text-yellow-800 rounded-xl border-2 shadow-xl" to ="Contact"> Contact</Link>
+                    <Link className=" hover:text-lime-950 rounded-xl" to ="Contact"> Contact</Link>
                 </li>
             </ul>
              

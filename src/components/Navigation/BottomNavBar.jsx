@@ -4,7 +4,7 @@ function BottomNav () {
 
     return (
         <>
-        <nav className=" bg-rose-300 font-thin shadow-2xl insert-x-0 bottom-0 flex flex-row fixed min-w-full
+        <nav className=" bg-rose-300 font-thin drop-shadow-lg insert-x-0 bottom-0 flex flex-row fixed min-w-full
         md:hidden">
         {/* <span className="text-right text-3xl text-yellow-800">Ma Boutique</span> */}
             <ul className=" flex flex-row justify-between align-middle p-3 min-w-full">
