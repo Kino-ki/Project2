@@ -1,6 +1,7 @@
 import { useParams } from "react-router-dom";
 import { useEffect } from "react";
 import { useState } from "react";
+import CountingBox from "../components/Cart/CountingBox";
 
 
 
@@ -20,8 +21,7 @@ function SingleProduct () {
 
     return(
         <div className="flex items-center justify-center align-middle">
-        {/* div du titre pour la version mobile */}
-            <div className="text-2xl font-medium mt-10 md:hidden">{products && products[id].name}</div>
+
             {/* div en flex row pour image d'un coté et texte de l'autre aka BIG CARD DIV */}
             <figure className=" mx-1
             md:flex md:flex-row-reverse md:align-middle md:rounded-lg
@@ -31,7 +31,8 @@ function SingleProduct () {
                 {/* div de la partie texte en flex-col */}
                 <figcaption className="flex flex-col justify-center mx-auto gap-10
                 md:mx-5 mb-16">
-                    <div className="md:text-4xl md:font-medium md:mt-10 hidden">{products && products[id].name}</div>
+                    <div className="
+                    md:text-4xl md:font-medium md:mt-16">{products && products[id].name}</div>
                     <div className=" mt-14 text-lg
                     md:text-xl md:mr-10 md:mt-20"> { products&& products[id].description} </div>
                     {/* div pour le prix et CART */}
@@ -39,9 +40,10 @@ function SingleProduct () {
                     md:gap-10">
                         <div className="text-end text-3xl
                         "> $ {products&& products[id].price} </div>
-
-                        <div className="text-start
-                        md">ADD TO CART</div>
+                        {/* ADD TO CART DIV */}
+                        <div className="flex flex-col gap-5">
+                            <CountingBox/>
+                        </div>
 
                     </div>
 
