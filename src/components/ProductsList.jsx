@@ -25,10 +25,10 @@ function ProductsList () {
     }, [filtered, products]);
  
     const handleFilter = (e) => {
-        // console.log(e.target.value);
+        console.log(e.target.value);
         setFiltered(e.target.value);
     };
-    console.log(products)
+
 
     // filteredProducts&&  console.log(filteredProducts);
     // filtered && console.log(filtered);
@@ -38,9 +38,11 @@ function ProductsList () {
     return (
         <>
             <div className="flex flex-row justify-center mt-10 mb-10 p-4 border-e-cyan-400">
-                Categories: 
-            <select className="text-center font-medium border-orange-900 border-2 rounded ml-10" name='select category' onChange={handleFilter}>
-                <option value='All' >-All</option>
+                <div className="md: text-xl">
+                Categories:
+                </div>
+            <select className="text-center font-medium border-orange-800 border rounded ml-10" name='select category' onChange={handleFilter}>
+                <option value='All' >-</option>
                 <option value='Mode' >-Mode</option>
                 <option value='Maison' >-Maison</option>
                 <option value='Sports'> -Sport</option>
