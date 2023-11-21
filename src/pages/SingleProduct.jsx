@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+ import { useParams } from "react-router-dom";
 import { useEffect } from "react";
 import { useState } from "react";
 import CountingBox from "../components/Cart/CountingBox";
@@ -26,13 +26,21 @@ function SingleProduct () {
             <figure className=" mx-1
             md:flex md:flex-row-reverse md:align-middle md:rounded-lg
             md:border-gray-300 md:border md:shadow-2xl md:max-w-4xl md:max-h-96 md:mt-32">
+                {/* START DIV NAME V-MOBILE */}
+                <div 
+                className="md:hidden text-xl font-semibold mt-5">
+                    {products && products[id].name}
+                </div>
+                {/* END DIV NAME V-MOBILE  */}
+
                 <img className=" rounded-lg mt-16
                 md:w-2/4 md:mt-0  " src={products && products[id].picture_resized}/>
                 {/* div de la partie texte en flex-col */}
-                <figcaption className="flex flex-col justify-center mx-auto gap-10
+                <figcaption 
+                className="flex flex-col justify-center mx-auto gap-10
                 md:mx-5 mb-16">
-                    <div className="
-                    md:text-4xl md:font-medium md:mt-16">{products && products[id].name}</div>
+                    <div 
+                    className=" hidden md:text-4xl md:font-medium md:mt-16 lg:block">{products && products[id].name}</div>
                     <div className=" mt-14 text-lg
                     md:text-xl md:mr-10 md:mt-20"> { products&& products[id].description} </div>
                     {/* div pour le prix et CART */}
