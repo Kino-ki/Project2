@@ -9,8 +9,10 @@ function ProductsList () {
     const [filtered, setFiltered] = useState('All');
 
 
+
+
     useEffect (() => {
-        fetch ('https://ioayoub.fr/api/eshop')
+        fetch ("https://ioayoub.fr/api/eshop")
             .then((response) => response.json())
             .then((data) => setProducts(data))
             .catch((err)=>console.error(err))
@@ -23,7 +25,7 @@ function ProductsList () {
             setFilteredProducts(products);
         }
     }, [filtered, products]);
- 
+
     const handleFilter = (e) => {
         console.log(e.target.value);
         setFiltered(e.target.value);

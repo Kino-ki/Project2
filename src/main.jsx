@@ -3,12 +3,12 @@ import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 import './index.css'
 import Products from './pages/ProductsPage.jsx'
-import { RouterProvider, createBrowserRouter } from 'react-router-dom'
+import { RouterProvider, createBrowserRouter} from 'react-router-dom'
 import NotFound from './pages/ErrorPage.jsx'
 import HomePage from './pages/Home Page.jsx'
 import Contact from './pages/contact.jsx'
 import SingleProduct from './pages/SingleProduct.jsx'
-
+// 
 
 const router = createBrowserRouter([
   {
